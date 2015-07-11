@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+  <title>The Watcher</title>
     <style>
         body { 
         	margin: 0; 
@@ -13,17 +13,39 @@
         	width:100%; 
         }
 
+        @font-face {
+          font-family: 'Pixels';
+          src: url('pixels.ttf') format('truetype');
+        }
+
         #logo {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-	
-			width:200px;
-			height:200px;
-			background-image: url(logo.gif)
+    			position: absolute;
+    			top: 50%;
+    			left: 50%;
+    			-webkit-transform: translate(-50%, -50%);
+    			-ms-transform: translate(-50%, -50%);
+    			transform: translate(-50%, -50%);
+    	
+    			width:200px;
+    			height:200px;
+    			background-image: url(logo.gif)
+        }
+
+        .comment {
+          margin-left: -50%;
+          width: 200%;
+          text-align: center;
+          margin-top: 107%;
+          color: #FFF;
+          font-family: "Pixels";
+          font-size: 37px;
+        }
+
+        .email {
+          text-align: center;
+          color: #ddd;
+          font-family: "Pixels";
+          font-size: 19px;
         }
         
     </style>
@@ -31,8 +53,11 @@
   </head>
   <body>
   	<div id="logo">
+      <p class="comment">Coming soon</p>
+    </div>
 
-  	</div>
 
+    <p class="email">contact@thewatcher.ch</p>
+    
   </body>
 </html>
