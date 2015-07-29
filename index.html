@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>The Watcher</title>
-    <style>
-        body { 
-        	margin: 0; 
-        	padding: 0; 
-        	background-color: #000000 
-        }
-        html, body, { 
-        	height: 100%; 
-        	width:100%; 
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @font-face {
-          font-family: 'Pixels';
-          src: url('pixels.ttf') format('truetype');
-        }
+    <title>The Watcher</title>
 
-        #logo {
-    			position: absolute;
-    			top: 50%;
-    			left: 50%;
-    			-webkit-transform: translate(-50%, -50%);
-    			-ms-transform: translate(-50%, -50%);
-    			transform: translate(-50%, -50%);
-    	
-    			width:200px;
-    			height:200px;
-    			background-image: url(logo.gif)
-        }
-
-        .comment {
-          margin-left: -50%;
-          width: 200%;
-          text-align: center;
-          margin-top: 119%;
-          color: #FFF;
-          font-family: "Pixels";
-          font-size: 37px;
-        }
-
-        .email {
-          text-align: center;
-          color: #ddd;
-          font-family: "Pixels";
-          font-size: 19px;
-        }
-        
-    </style>
+    <!--<link rel="icon" type="image/png" href="favicon.png">-->    
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
 
   </head>
+
   <body>
-  	<div id="logo">
-      <p class="comment">Coming soon</p>
+
+    <div id="root">
+  
+      <div id="header">
+        <a href="#">
+          <img class="logo" width="80" height="52" src="img/logo-tiny.png" />
+        </a>
+      </div>
+
+      <div class="top">
+        <p class="text product">Twin Balance Classic</p>
+        <p class="text tagline">By The Watcher</p>
+      </div>
+
+      <div id="product">
+       
+        <div class="download-btn-holder">
+
+          <a href="https://play.google.com/store/apps/details?id=thewatcher.ch.twin_balance_classic">
+            <img alt="Get it on Google Play"
+                 src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+          </a>
+
+        </div>
+
+        <div id="promo-pic">
+          <a href="https://play.google.com/store/apps/details?id=thewatcher.ch.twin_balance_classic">
+            <img src="img/watches.png" alt="Twin Balance Classic Watch Face">
+          </a>
+        </div>
+
+        
+      </div>
+
+      <div id="footer">
+        <ul>
+          <li class="text first"><a href="#">Home</a></li>
+          <li class="text"><a href="#">Facebook</a></li>
+          <li class="text"><a href="mailto:contact@thewatcher.ch">Contact</a></li>
+        </ul>
+
+      </div>
+
     </div>
 
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <p class="email">contact@thewatcher.ch</p>
+    ga('create', 'UA-65751619-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
     
   </body>
 </html>
