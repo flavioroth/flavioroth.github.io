@@ -1,38 +1,38 @@
 
 
 body, html {
-	width:100%;
-	height:100%;
-	background-color:black;
-	margin:0 auto;
-	padding: 0;
+  width:100%;
+  height:100%;
+  background-color:black;
+  margin:0 auto;
+  padding: 0;
 }
 
 p {
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 #root {
-	background-position-x:50%;
-	background-position-y:-10em;
-	background-repeat: no-repeat;
-	width:100%;
-	height:100%;
-	margin:auto;
-	padding-top: 1em;
+  background-position-x:50%;
+  background-position-y:-10em;
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
+  margin:auto;
+  padding-top: 1em;
 }
 
 #root.twinbalance {
-	background-image: url(img/background-medium.jpg);
+  background-image: url(img/background-medium.jpg);
 }
 
 #root.thewatcher {
-	background-image: url(img/background-thewatcher-medium.jpg);
+  background-image: url(img/background-thewatcher-medium.jpg);
 }
 
 #logo-text-container {
@@ -41,13 +41,13 @@ a {
 }
 
 .separator {
-	border-top: 1px solid #171717;
-	width: inherit;
-  	max-width: 500px;
-  	margin: auto;
-  	margin: auto;
-  	padding-top: 2em;
-  	padding-bottom: 0em;
+  border-top: 1px solid #171717;
+  width: inherit;
+  max-width: 500px;
+  margin: auto;
+  margin: auto;
+  padding-top: 2em;
+  padding-bottom: 0em;
 }
 
 #footer {
@@ -63,23 +63,23 @@ a {
 }
 
 #menu ul {
-	list-style-type: none;
-	text-align: center;
-	padding: 0;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 #menu ul li {
-	display: inline-block;
-	padding-left: 1.4em;
+  display: inline-block;
+  padding-left: 1.4em;
 }
 
 #menu ul li.first {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 #menu .text {
-	font-size: 0.7em;
-	color:#919191;
+  font-size: 0.7em;
+  color:#919191;
 }
 
 .text {
@@ -92,22 +92,22 @@ a {
 }
 
 .text.tagline {
-	text-align: center;
-	margin-top: 0.5em;
-  	letter-spacing: 0.5em;
-  	font-size: 0.5em;
+  text-align: center;
+  margin-top: 0.5em;
+  letter-spacing: 0.5em;
+  font-size: 0.5em;
 }
 
 .text.product {
-	padding:1em;
-	text-align: center;
-	letter-spacing: 0.5em;
-	font-size: 1.1em;
+  padding:1em;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 1.1em;
 
 }
 
 .brand {
-	text-align:center;
+  text-align:center;
 }
 
 .brand.text {
@@ -119,17 +119,17 @@ a {
 
 
 .brand.text.the {
-	font-weight: normal;
-	letter-spacing: 2px;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
 
 .brand.text.watcher {
-	font-weight: bold;
-	letter-spacing: 3px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .download.text {
-	font-size: 0.5em;
+  font-size: 0.5em;
 }
 
 .inline.middle {
@@ -138,7 +138,7 @@ a {
 }
 
 #logo-container {
-	padding-top: 3em;
+  padding-top: 3em;
 }
 
 #logo-picture {
@@ -155,78 +155,74 @@ a {
 }
 
 #header {
-  	width: inherit;
-	text-align: center;
+  width: inherit;
+  text-align: center;
 }
 
 .vertical-spacer {
-	height: 220px;
+  height: 220px;
 }
 
 #promo-pic {
-
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 .arrow-down {
-	margin: 0 auto;
-	width: 0;
-	height: 0;
-	margin-top: 1em;
-	border-style: solid;
-	border-width: 10px 20px 0 20px;
-	border-color: #2f2f2f transparent transparent transparent;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  margin-top: 1em;
+  border-style: solid;
+  border-width: 10px 20px 0 20px;
+  border-color: #2f2f2f transparent transparent transparent;
 }
 
 .reveal {
-   -webkit-animation: reveal .9s ease-out 0s 1 normal ;
-   animation: reveal .9s ease-out 0s 1 normal ;
+  -webkit-animation: reveal .9s ease-out 0s 1 normal ;
+  animation: reveal .9s ease-out 0s 1 normal ;
 }
 
 #promo-pic img {
-	/*max-width: 300px;*/
-	cursor: pointer;
-	width: 90%;
-  	padding-left: 1em;
-  	padding-right: 1em;
+  cursor: pointer;
+  width: 90%;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 #product {
-	
-	max-width: 500px;
-	margin: auto;
-
-	margin-top: 3em;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 3em;
 }
 
 
 #teaser {
-	text-align: center;
-	margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 #teaser img.seduction {
-	cursor: pointer;
-	width: 90%;
-	max-width:640px;
-  	padding-left: 1em;
-  	padding-right: 1em;
-  	margin-bottom: 2em;
-  	margin-top: 3em;
+  cursor: pointer;
+  width: 90%;
+  max-width:640px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 2em;
+  margin-top: 3em;
 }
 
 #teaser .tagline.title {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 #about {
-	text-align: center;
-	padding-top: 3em;
-  	padding-bottom: 4em;
-  	padding-left: 0.5em;
-  	padding-right: 0.5em;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 #about img {
@@ -234,11 +230,11 @@ a {
 }
 
 #about .text {
-	text-transform: none;
-	font-style: italic;
-	color: #d2d2d2;
-	font-size:1.1em;
-	color: #e2e2e2;
+  text-transform: none;
+  font-style: italic;
+  color: #d2d2d2;
+  font-size:1.1em;
+  color: #e2e2e2;
 }
 
 #swissmade {
@@ -265,70 +261,69 @@ a {
 }
 
 .download-btn > .text {
-	font-size: 0.7em;
+  font-size: 0.7em;
 }
 
 
 
 .download-btn > .text:before {
- 	position: absolute;
-    left: 1em;
-    padding: 0 0px;
-    font-family: FontAwesome;
-    content: "\f17b";
+  position: absolute;
+  left: 1em;
+  padding: 0 0px;
+  font-family: FontAwesome;
+  content: "\f17b";
 }
 
 .download-btn-holder {
-	text-align: center;
-	margin-top: 1.5em;
-  	-webkit-animation-delay: 5s;
-  	animation-delay: 5s;
-  	-webkit-animation-iteration-count: infinite;
+  text-align: center;
+  margin-top: 1.5em;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-iteration-count: infinite;
 }
 
 .top {
-	width:inherit;
-	padding-top: 0.2em;
+  width:inherit;
+  padding-top: 0.2em;
 }
 
 
 @-webkit-keyframes reveal {
  0%{
-	-webkit-transform: translateY(20px);
-	opacity:0;
-	transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    opacity:0;
+    transform: translateY(20px);
  }
  100%{
-	-webkit-transform: translateY(0);
-	opcity:1;
-	transform: translateY(0);
+    -webkit-transform: translateY(0);
+    opcity:1;
+    transform: translateY(0);
  }
 }
 
 @keyframes reveal {
  0%{
-	opacity:0;
-	transform: translateY(20px);
+    opacity:0;
+    transform: translateY(20px);
  }
  100%{
-	opcity:1;
-	transform: translateY(0);
+    opcity:1;
+    transform: translateY(0);
  }
 }
 
 @media only screen and (max-height: 600px) {
 
+  #product {
+      margin-top: 3em;
+  }
 
-	#product {
-		margin-top: 3em;
-	}
+  .text.product {
+      font-size: 0.9em;
+  }
 
-	.text.product {
-		font-size: 0.9em;
-	}
-
-	#root {
-		padding-top: 0.5em;
-	}
+  #root {
+      padding-top: 0.5em;
+  }
 
 }
