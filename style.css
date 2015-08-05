@@ -18,7 +18,6 @@ a {
 }
 
 #root {
-	background-image: url(img/background-medium.jpg);
 	background-position-x:50%;
 	background-position-y:-10em;
 	background-repeat: no-repeat;
@@ -28,14 +27,30 @@ a {
 	padding-top: 1em;
 }
 
+#root.twinbalance {
+	background-image: url(img/background-medium.jpg);
+}
+
+#root.thewatcher {
+	background-image: url(img/background-thewatcher-medium.jpg);
+}
+
 #logo-text-container {
   margin: 0 auto;
   text-align: center;
 }
 
+.separator {
+	border-top: 1px solid #171717;
+	width: inherit;
+  	max-width: 500px;
+  	margin: auto;
+  	margin: auto;
+  	padding-top: 2em;
+  	padding-bottom: 0em;
+}
 
 #footer {
-  height: 3em;
   border-top: 1px solid #171717;
   width: inherit;
   max-width: 500px;
@@ -43,22 +58,26 @@ a {
   margin-top: 3em;
 }
 
-#footer ul {
+#menu {
+  height: 3em;
+}
+
+#menu ul {
 	list-style-type: none;
 	text-align: center;
 	padding: 0;
 }
 
-#footer ul li {
+#menu ul li {
 	display: inline-block;
 	padding-left: 1.4em;
 }
 
-#footer ul li.first {
+#menu ul li.first {
 	padding-left: 0;
 }
 
-#footer .text {
+#menu .text {
 	font-size: 0.7em;
 	color:#919191;
 }
@@ -88,20 +107,24 @@ a {
 
 }
 
+.brand {
+	text-align:center;
+}
 
-
-.logo.text {
+.brand.text {
   display:inline-block;
   font-size: 2em;
 
 }
 
-.logo.text.the {
+
+
+.brand.text.the {
 	font-weight: normal;
 	letter-spacing: 2px;
 }
 
-.logo.text.watcher {
+.brand.text.watcher {
 	font-weight: bold;
 	letter-spacing: 3px;
 }
@@ -149,16 +172,27 @@ a {
   margin-bottom: 2em;
 }
 
+.arrow-down {
+	margin: 0 auto;
+	width: 0;
+	height: 0;
+	margin-top: 1em;
+	border-style: solid;
+	border-width: 10px 20px 0 20px;
+	border-color: #2f2f2f transparent transparent transparent;
+}
+
+.reveal {
+   -webkit-animation: reveal .9s ease-out 0s 1 normal ;
+   animation: reveal .9s ease-out 0s 1 normal ;
+}
+
 #promo-pic img {
 	/*max-width: 300px;*/
 	cursor: pointer;
 	width: 90%;
   	padding-left: 1em;
   	padding-right: 1em;
-
-
-   -webkit-animation: reveal .9s ease-out 0s 1 normal ;
-   animation: reveal .9s ease-out 0s 1 normal ;
 }
 
 #product {
@@ -169,6 +203,50 @@ a {
 	margin-top: 3em;
 }
 
+
+#teaser {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#teaser img.seduction {
+	cursor: pointer;
+	width: 90%;
+	max-width:640px;
+  	padding-left: 1em;
+  	padding-right: 1em;
+  	margin-bottom: 2em;
+  	margin-top: 3em;
+}
+
+#teaser .tagline.title {
+	font-size: 1em;
+}
+
+#about {
+	text-align: center;
+	padding-top: 3em;
+  	padding-bottom: 4em;
+  	padding-left: 0.5em;
+  	padding-right: 0.5em;
+}
+
+#about img {
+
+}
+
+#about .text {
+	text-transform: none;
+	font-style: italic;
+	color: #d2d2d2;
+	font-size:1.1em;
+	color: #A8A8A8;
+}
+
+#swissmade {
+  text-align: center;
+  padding-top: 1em;
+}
 
 .centered {
   position: absolute;
