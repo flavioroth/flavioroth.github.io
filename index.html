@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Test</title>
-
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="icon" href="images/favicon.png" />
     <script type="application/javascript" src="js/gauge.min.js"></script>
+    <style>
+    body {
+      width:100%;
+    }
+    #content {
+      margin: auto;
+      width:300px;
+      height:100%;
+      text-align: center;
+    }
+
+    #gauge {
+        width: 100%;
+    }
+    </style>
   </head>
 
   <body>
-    <canvas id="gauge"></canvas>
+    <div id="content">
+      <canvas id="gauge"></canvas>
+      <a id="gen_link" href="#">Generate new score</a>
+    </div>
     <script type="application/javascript">
         EasingFunctions = {
       // no easing, no acceleration
@@ -126,9 +141,16 @@
       score = Math.min(Math.max(0, score), 1000);
     }
 
-    console.log(score);
-    window.location.hash = "#" + score;
+    var hash = "#" + score;
+    window.location.hash = hash;
+    var link = document.getElementById("gen_link");
+
+    link.addEventListener("click", function(){
+      window.location =  "#" + Math.floor(Math.random()*1000);
+      window.location.reload();
+    });
     animateScore(score);
     </script>
+
   </body>
 </html>
