@@ -21,13 +21,17 @@
     #gauge {
         width: 100%;
     }
+
+    .hidden {
+      visibility: hidden;
+    }
     </style>
   </head>
 
   <body>
     <div id="content">
       <canvas id="gauge"></canvas>
-      <a id="gen_link" href="#">Generate new score</a>
+      <a class="hidden" id="gen_link" href="#">Generate new score</a>
     </div>
     <script type="application/javascript">
         EasingFunctions = {
@@ -115,6 +119,7 @@
         animation: false,
     }).draw();
 
+    var link = document.getElementById("gen_link");
 
     function animateScore(score) {
       var start = new Date().getTime();
@@ -125,6 +130,7 @@
         var nprogress = 1.0 - progress;
         if(elapsed >= duration) {
           clearInterval(interval);
+          link.setAttribute("class", "");
         }
         var val = EasingFunctions.elastic(progress);
         var second_perturbation = (1.0-0.2*((Math.sin(elapsed*0.02-(nprogress*nprogress*0.01))*0.5+0.5)*(0.3*nprogress*nprogress)));
@@ -143,7 +149,7 @@
 
     var hash = "#" + score;
     window.location.hash = hash;
-    var link = document.getElementById("gen_link");
+
 
     link.addEventListener("click", function(){
       window.location =  "#" + Math.floor(Math.random()*1000);
