@@ -5,13 +5,130 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title></title>
+    <title>Test</title>
 
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="images/favicon.png" />
+    <script type="application/javascript" src="js/gauge.min.js"></script>
   </head>
 
   <body>
-    <script src="js/scripts.js"></script>
+    <canvas id="gauge"></canvas>
+    <script type="application/javascript">
+        EasingFunctions = {
+      // no easing, no acceleration
+      linear: function (t) { return t },
+      // accelerating from zero velocity
+      easeInQuad: function (t) { return t*t },
+      // decelerating to zero velocity
+      easeOutQuad: function (t) { return t*(2-t) },
+      // acceleration until halfway, then deceleration
+      easeInOutQuad: function (t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t },
+      // accelerating from zero velocity
+      easeInCubic: function (t) { return t*t*t },
+      // decelerating to zero velocity
+      easeOutCubic: function (t) { return (--t)*t*t+1 },
+      // acceleration until halfway, then deceleration
+      easeInOutCubic: function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 },
+      // accelerating from zero velocity
+      easeInQuart: function (t) { return t*t*t*t },
+      // decelerating to zero velocity
+      easeOutQuart: function (t) { return 1-(--t)*t*t*t },
+      // acceleration until halfway, then deceleration
+      easeInOutQuart: function (t) { return t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t },
+      // accelerating from zero velocity
+      easeInQuint: function (t) { return t*t*t*t*t },
+      // decelerating to zero velocity
+      easeOutQuint: function (t) { return 1+(--t)*t*t*t*t },
+      // acceleration until halfway, then deceleration
+      easeInOutQuint: function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t },
+       // elastic bounce effect at the beginning
+      easeInElastic: function (t) { return (.04 - .04 / t) * Math.sin(25 * t) + 1 },
+      // elastic bounce effect at the end
+      easeOutElastic: function (t) { return .04 * t / (--t) * Math.sin(25 * t) },
+      // elastic bounce effect at the beginning and end
+      easeInOutElastic: function (t) { return (t -= .5) < 0 ? (.02 + .01 / t) * Math.sin(50 * t) : (.02 - .01 / t) * Math.sin(50 * t) + 1 },
+
+      elastic: p => 1 - EasingFunctions.delastic(1 - p),
+
+      delastic: p => {
+            let x = 1.5;
+            return Math.pow(2, 10 * (p - 1)) *
+                Math.cos(20 * Math.PI * x / 3 * p);
+        }
+    }
+
+    var gauge = new RadialGauge({
+        renderTo: 'gauge',
+        width: 300,
+        height: 300,
+        units: "Fitness",
+        minValue: 0,
+        maxValue: 1000,
+        majorTicks: [
+            "0",
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900",
+            "1000",
+        ],
+        minorTicks: 2,
+        strokeTicks: true,
+        highlights: [
+            {
+                "from": 800,
+                "to": 1000,
+                "color": "rgba(200, 50, 50, .75)"
+            }
+        ],
+        colorPlate: "#fff",
+        borderShadowWidth: 0,
+        borders: false,
+        needleType: "arrow",
+        needleWidth: 2,
+        needleCircleSize: 7,
+        needleCircleOuter: true,
+        needleCircleInner: false,
+        animatedValue: false,
+        animateOnInit: false,
+        animation: false,
+    }).draw();
+
+
+    function animateScore(score) {
+      var start = new Date().getTime();
+      var interval = setInterval(function(){
+        var elapsed = new Date().getTime() - start;
+        var duration = 5000;
+        var progress = elapsed/duration;
+        var nprogress = 1.0 - progress;
+        if(elapsed >= duration) {
+          clearInterval(interval);
+        }
+        var val = EasingFunctions.elastic(progress);
+        var second_perturbation = (1.0-0.2*((Math.sin(elapsed*0.02-(nprogress*nprogress*0.01))*0.5+0.5)*(0.3*nprogress*nprogress)));
+        //val *= second_perturbation;
+        gauge.value = val * 1000 * (score/1000.0);
+      },16)
+    }
+
+    var fragment = window.location.hash.substr(1);
+    var score = parseInt(fragment, 10);
+    if(Number.isNaN(score)) {
+      score = Math.floor(Math.random()*1000);
+    } else {
+      score = Math.min(Math.max(0, score), 1000);
+    }
+
+    console.log(score);
+    window.location.hash = "#" + score;
+    animateScore(score);
+    </script>
   </body>
 </html>
